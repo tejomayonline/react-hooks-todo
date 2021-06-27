@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-
 function AddTodo({setInputItems, inputItems}) {
     const [input, setInput] = useState('');
     const addItems = () => {

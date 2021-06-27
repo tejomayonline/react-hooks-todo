@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "../App.css";
 import AddTodo from './AddTodo';
 import RemoveAllTodo from './RemoveAllTodo';
 import ShowTodo from './ShowTodo';
 function TodoList() {
- 
     const [inputItems, setInputItems] = useState([]);    
+    useEffect(() => {
+        document.title = `TODO added (${inputItems.length})`;
+    });
     return (
         <>
             <div className="main-div">
