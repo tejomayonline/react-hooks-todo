@@ -1,11 +1,21 @@
+import { createContext } from 'react';
 import './App.css';
+import CompA from './components/CompA';
 import TodoList from './components/TodoList';
+
+export const AppName = createContext();
 function App() {
+ 
   return (
     <div className="App">
-      <TodoList/>
+      <AppName.Provider value={'Todo App'}>
+        <CompA/>
+      </AppName.Provider>
+      <TodoList />
+  
     </div>
   );
 }
 
 export default App;
+

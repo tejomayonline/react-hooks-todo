@@ -7,7 +7,8 @@ function TodoList() {
     const [inputItems, setInputItems] = useState([]);    
     useEffect(() => {
         document.title = `TODO added (${inputItems.length})`;
-    });
+        return () => console.log('destoryed');
+    }, [inputItems]);
     return (
         <>
             <div className="main-div">
