@@ -8,7 +8,7 @@ function App() {
  
   return (
     <div className="App">
-      <AppName.Provider value={'Todo App'}>
+      <AppName.Provider value={{ name: 'TodoList', type:'App'}}>
         <CompA/>
       </AppName.Provider>
       <TodoList />
